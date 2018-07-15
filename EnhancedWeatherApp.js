@@ -4,16 +4,7 @@ let circle = document.querySelector(".circle");
 let tempNumber = parseInt(temp.textContent);
 let input = document.querySelector("input");
 
-localStorage.date = Date();
-document.getElementById("date").textContent = localStorage.date;
-console.log("LAST DATE VIEWED WAS: ",localStorage.date);
-
-localStorage.lastlocation = document.querySelector("#enterlocation").value;
-document.querySelector("#location").textContent = input.value;
-console.log("LAST LOCATION VIEWED WAS: ",localStorage.lastlocation);
-
 var defaultLocation = "Chicago,IL";
-
 
 //Create a FUNCTION that:
 //(1) Can accept one of two arguments and (use the "||") and will use whichever returns TRUE. One will be the variable that the user enters (put this on the left side of the "||") and the other will act as the "default" value if the user enters a "falsy value" or doesn't enter one at all.
@@ -82,12 +73,7 @@ function FindWeatherConditions(enterlocation = document.querySelector("#enterloc
     
     console.log("WIND DIRECTION: ",jsonData.query.results.channel.wind.direction);
     }); 
-
-    //localStorage.lastlocation = document.querySelector("#enterlocation").value;
-    //localStorage.date = Date();
-
-    //document.getElementById("location").innerHTML = localStorage.lastlocation;
-    //$("#date").textContent(localStorage.date);
+    
 } 
 
 

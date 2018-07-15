@@ -11,7 +11,7 @@
 
 <body>
     <div class= "container">
-        <header><h1>WORLD WEATHER WATCHER<h1></header>
+        <header><h1>W<img src="globe.jpg"/>RLD WEATHER WATCHER<h1></header>
 
             <h3 class="center">Find Weather condition for...</h3>
             <input type="text" name="name" id="enterlocation" class = "col-lg-12" placeholder = "Enter the location you want to find weather conditions for here."/><br> <!--Input the city you want to find weather conditions for.-->
@@ -36,8 +36,9 @@
                 <p><b>Wind Speed:</b> <span id="windspeed"></span></p>
             </div>
             <div class="lastlogin col-lg-4">
-                <h3>Previous viewing:</h3>
-                <h3><span id="location"></span> on <span id="date"></span></h3>
+                <h5 id="history">- Search History - </h5>
+                <p><strong>Last Location:</strong> <span id="lastlocation"></span></p>
+                <p><strong>Date Viewed:</strong> <span id="lastviewed"></span></p>
             </div>
         </div>
 
