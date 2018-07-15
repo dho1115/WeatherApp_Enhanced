@@ -4,6 +4,10 @@ let circle = document.querySelector(".circle");
 let tempNumber = parseInt(temp.textContent);
 let input = document.querySelector("input");
 
+localStorage.date = Date();
+document.getElementById("date").innerHTML = localStorage.date;
+console.log("LAST DATE VIEWED WAS: ",localStorage.date);
+
 var defaultLocation = "Chicago,IL";
 
 
@@ -13,6 +17,15 @@ var defaultLocation = "Chicago,IL";
 //(3) RETURNS the ENTIRE $.getJSON() value.
 
 function FindWeatherConditions(enterlocation = document.querySelector("#enterlocation").value || "Chicago,IL") {
+
+    // localStorage.lastlocation = document.querySelector("#enterlocation").value;
+    // localStorage.date = Date();
+
+    // document.getElementById("location").innerHTML = localStorage.lastlocation;
+    // document.getElementById("date").innerHTML = localstorage.date;
+    
+    // console.log(localStorage.lastlocation);
+    // console.log(localStorage.date);   
 
     var url = "https://query.yahooapis.com/v1/public/yql?q=select%20*%20from%20weather.forecast%20where%20woeid%20in%20(select%20woeid%20from%20geo.places(1)%20where%20text%3D%22" + enterlocation + "%22)&format=json&env=store%3A%2F%2Fdatatables.org%2Falltableswithkeys";
 
@@ -66,15 +79,17 @@ function FindWeatherConditions(enterlocation = document.querySelector("#enterloc
     console.log("WIND DIRECTION: ",jsonData.query.results.channel.wind.direction);
     }); 
 
-    localStorage.lastlocation = document.querySelector("#enterlocation").value;
-    localStorage.date = Date();
-    
-    console.log(localStorage.lastlocation);
-    console.log(localStorage.date);
-    
-    $("#location").textContent(localStorage.lastlocation)
-    $("#date").textContent(localStorage.date);
+    //localStorage.lastlocation = document.querySelector("#enterlocation").value;
+    //localStorage.date = Date();
+
+    //document.getElementById("location").innerHTML = localStorage.lastlocation;
+    //$("#date").textContent(localStorage.date);
 } 
+
+localStorage.lastlocation = document.querySelector("#enterlocation").value;
+document.querySelector("#location").textContent = localStorage.lastlocation;
+console.log("LAST LOCATION VIEWED WAS: ",localStorage.lastlocation);
+
 
 //CALL the function (that was defined above) below this comment.
 
