@@ -22,6 +22,11 @@
     margin-bottom: 15px;
 }
 
+#enterlocation{
+border: 1px solid black;
+background-color: floralwhite;
+} 
+
 header {
     font-family: 'Shrikhand', cursive;
     margin: auto;
