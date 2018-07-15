@@ -12,16 +12,7 @@ var defaultLocation = "Chicago,IL";
 //(3) RETURNS the ENTIRE $.getJSON() value.
 
 function FindWeatherConditions(enterlocation = document.querySelector("#enterlocation").value || "Chicago,IL") {
-
-    // localStorage.lastlocation = document.querySelector("#enterlocation").value;
-    // localStorage.date = Date();
-
-    // document.getElementById("location").innerHTML = localStorage.lastlocation;
-    // document.getElementById("date").innerHTML = localstorage.date;
-    
-    // console.log(localStorage.lastlocation);
-    // console.log(localStorage.date);   
-
+   
     var url = "https://query.yahooapis.com/v1/public/yql?q=select%20*%20from%20weather.forecast%20where%20woeid%20in%20(select%20woeid%20from%20geo.places(1)%20where%20text%3D%22" + enterlocation + "%22)&format=json&env=store%3A%2F%2Fdatatables.org%2Falltableswithkeys";
 
     return $.getJSON
@@ -75,9 +66,6 @@ function FindWeatherConditions(enterlocation = document.querySelector("#enterloc
     }); 
     
 } 
-
-
-
 
 //CALL the function (that was defined above) below this comment.
 
