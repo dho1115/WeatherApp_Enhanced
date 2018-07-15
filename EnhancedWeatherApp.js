@@ -25,6 +25,35 @@ function FindWeatherConditions(enterlocation = document.querySelector("#enterloc
     $("#date").text(jsonData.query.results.channel.item.condition.date);
     $(".temp").text(jsonData.query.results.channel.item.condition.temp);
     
+    if(jsonData.query.results.channel.item.condition.temp > 105) {
+        $(".circle").css("background-color","rgb(255, 0, 0)");
+    } 
+
+    else if(jsonData.query.results.channel.item.condition.temp > 90) {
+        $(".circle").css("background-color","rgb(255, 0, 128)");
+    } 
+
+    else if(jsonData.query.results.channel.item.condition.temp > 60) {
+        $(".circle").css("background-color","rgb(255, 0, 255)");
+    } 
+
+    else if(jsonData.query.results.channel.item.condition.temp > 50) {
+        $(".circle").css("background-color","rgb(64, 255, 0)");
+    } 
+
+    else if(jsonData.query.results.channel.item.condition.temp > 30) {
+        $(".circle").css("background-color","rgb(0, 64, 255)");
+    } 
+
+    else if(jsonData.query.results.channel.item.condition.temp >= 0) {
+        $(".circle").css("background-color","rgb(0, 191, 255)");
+    }
+
+    else {
+        $(".circle").css("background-color","rgb(0, 255, 255)");
+    }
+
+    
     console.log("WIND CHILL:  ",jsonData.query.results.channel.wind.chill);
     $("#windchill").text(jsonData.query.results.channel.wind.chill);
     
