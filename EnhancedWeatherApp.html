@@ -13,18 +13,18 @@
     <div class= "container">
         <header><h1>W<img src="globe.jpg"/>RLD WEATHER WATCHER<h1></header>
 
-            <h3 class="center">Find Weather condition for...</h3>
+            <h3 class="center">Find Weather condition(s) for...</h3>
             <input type="text" name="name" id="enterlocation" class = "col-lg-12" placeholder = "Enter the location you want to find weather conditions for here."/><br> <!--Input the city you want to find weather conditions for.-->
             
             <p></p>
-            <button onclick="FindWeatherConditions()">Submit</button> <!--Click submit when you are done.-->
+            <button onclick="FindWeatherConditions(),storage()">Submit</button> <!--Click submit when you are done.-->
             <p></p>
 
         <div class="row col-lg-12">
             <h3 class="center">Current weather condition(s) for <span id="place"></span> as of <span id="date"></span> </h3>
         </div>
-
-        <div class= "row" style= "border: 1px dotted green">
+        <p></p>
+        <div class= "row" style="margin-right: 3%">
             <div class="col-lg-4">
                 <div class="circle">
                     <h1 class="temp"></h1>
