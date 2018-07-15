@@ -1,0 +1,40 @@
+
+
+.additionalinfo {
+    border: 1px dotted red;
+} 
+
+.center {
+    text-align: center;
+} 
+
+.circle {
+    border: 1px solid black;
+    border-radius: 360px;
+    height: 10vw;
+    width: 10vw;
+    padding: auto;
+    margin-left: 30%;
+}
+.container {
+    border: 1px solid black;
+    margin: auto;
+    margin-bottom: 15px;
+}
+
+header {
+    font-family: 'Shrikhand', cursive;
+    margin: auto;
+    text-align: center;
+    color: red;
+}
+
+h3 {
+    border: 1px solid red;
+}
+
+.temp {
+    padding-left: 35%;
+    padding-top: 30%;
+}
+
