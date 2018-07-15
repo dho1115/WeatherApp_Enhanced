@@ -5,8 +5,12 @@ let tempNumber = parseInt(temp.textContent);
 let input = document.querySelector("input");
 
 localStorage.date = Date();
-document.getElementById("date").innerHTML = localStorage.date;
+document.getElementById("date").textContent = localStorage.date;
 console.log("LAST DATE VIEWED WAS: ",localStorage.date);
+
+localStorage.lastlocation = document.querySelector("#enterlocation").value;
+document.querySelector("#location").textContent = input.value;
+console.log("LAST LOCATION VIEWED WAS: ",localStorage.lastlocation);
 
 var defaultLocation = "Chicago,IL";
 
@@ -86,9 +90,7 @@ function FindWeatherConditions(enterlocation = document.querySelector("#enterloc
     //$("#date").textContent(localStorage.date);
 } 
 
-localStorage.lastlocation = document.querySelector("#enterlocation").value;
-document.querySelector("#location").textContent = localStorage.lastlocation;
-console.log("LAST LOCATION VIEWED WAS: ",localStorage.lastlocation);
+
 
 
 //CALL the function (that was defined above) below this comment.
