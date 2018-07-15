@@ -56,7 +56,6 @@ function FindWeatherConditions(enterlocation = document.querySelector("#enterloc
         //$(".circle").css("background-color","rgb(0, 255, 255)");
         $(".circle").css("background-image","url('freezing.jpg')");
     }
-
     
     console.log("WIND CHILL:  ",jsonData.query.results.channel.wind.chill);
     $("#windchill").text(jsonData.query.results.channel.wind.chill);
@@ -65,7 +64,16 @@ function FindWeatherConditions(enterlocation = document.querySelector("#enterloc
     $("#windspeed").text(jsonData.query.results.channel.wind.speed);
     
     console.log("WIND DIRECTION: ",jsonData.query.results.channel.wind.direction);
-    });
+    }); 
+
+    localStorage.lastlocation = document.querySelector("#enterlocation").value;
+    localStorage.date = Date();
+    
+    console.log(localStorage.lastlocation);
+    console.log(localStorage.date);
+    
+    $("#location").textContent(localStorage.lastlocation)
+    $("#date").textContent(localStorage.date);
 } 
 
 //CALL the function (that was defined above) below this comment.
