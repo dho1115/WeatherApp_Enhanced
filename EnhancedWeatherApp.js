@@ -26,15 +26,17 @@ function FindWeatherConditions(enterlocation = document.querySelector("#enterloc
     $(".temp").text(jsonData.query.results.channel.item.condition.temp);
     
     if(jsonData.query.results.channel.item.condition.temp > 105) {
-        $(".circle").css("background-color","rgb(255, 0, 0)");
+        $(".circle").css("background-color","url('HotDesert.jpg')");
     } 
 
     else if(jsonData.query.results.channel.item.condition.temp > 90) {
-        $(".circle").css("background-color","rgb(255, 0, 128)");
+        //$(".circle").css("background-color","rgb(255, 0, 128)");
+        $(".circle").css("background-image","url('summerII.jpg')");
     } 
 
     else if(jsonData.query.results.channel.item.condition.temp > 60) {
-        $(".circle").css("background-color","rgb(255, 0, 255)");
+        //$(".circle").css("background-color","rgb(255, 0, 255)");
+        $(".circle").css("background-image", "url('spring.jpg')");
     } 
 
     else if(jsonData.query.results.channel.item.condition.temp > 50) {
@@ -46,11 +48,13 @@ function FindWeatherConditions(enterlocation = document.querySelector("#enterloc
     } 
 
     else if(jsonData.query.results.channel.item.condition.temp >= 0) {
-        $(".circle").css("background-color","rgb(0, 191, 255)");
+        //$(".circle").css("background-color","rgb(0, 191, 255)");
+        $(".circle").css("background-image","url('freezing.jpg')");
     }
 
     else {
-        $(".circle").css("background-color","rgb(0, 255, 255)");
+        //$(".circle").css("background-color","rgb(0, 255, 255)");
+        $(".circle").css("background-image","url('freezing.jpg')");
     }
 
     
