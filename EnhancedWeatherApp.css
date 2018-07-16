@@ -8,6 +8,10 @@ body {
     margin-top: 5%;
 }
 
+.carousel-inner, #carouselExampleIndicators {
+    border-radius: 30px;
+}
+
 .center {
     text-align: center;
 } 
