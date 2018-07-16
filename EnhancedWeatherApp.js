@@ -38,7 +38,8 @@ function FindWeatherConditions(enterlocation = document.querySelector("#enterloc
     else if(jsonData.query.results.channel.item.condition.temp > 60) {
         //$(".circle").css("background-color","rgb(255, 0, 255)");
         $(".circle").css("background-image", "url('spring.jpg')");
-        $("body").css("background-color","rgb(255, 102, 255)");
+        //$("body").css("background-color","rgb(255, 102, 255)");
+        $("body").css("background-image","url('stars1.jpg')");
     } 
 
     else if(jsonData.query.results.channel.item.condition.temp > 50) {
